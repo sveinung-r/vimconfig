@@ -3,7 +3,7 @@ set -e
 
 olddir=~/dotfiles_old
 
-echo "Creating '$olddir' for existing files"
+echo -e "Creating '$olddir' for existing files\n"
 mkdir -p $olddir
 
 files=".bashrc .alias .vimrc.first .vimrc.last .vimrc.plugins .tmux.conf .gitconfig .gitignore"
@@ -18,7 +18,7 @@ for file in $files; do
         mv ~/$file $oldir/
     fi
 
-    echo "Creating symlink to $(pwd)/$file in home directory."
+    echo -e "Creating symlink to $(pwd)/$file in home directory\n"
     ln -s  $(pwd)/$file ~/$file
 done
 
