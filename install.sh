@@ -6,7 +6,7 @@ olddir=~/dotfiles_old
 echo "Creating '$olddir' for existing files"
 mkdir -p $olddir
 
-files=".bashrc .alias .vimrc.first .vimrc.last .vimrc.plugins .tmux.conf"
+files=".bashrc .alias .vimrc.first .vimrc.last .vimrc.plugins .tmux.conf .gitconfig .gitignore"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     files="${files} .bash_profile"
