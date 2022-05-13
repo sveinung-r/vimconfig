@@ -1,6 +1,5 @@
 # File handling and moving around
 alias cd..="cd .."
-alias ls="exa"      # Requires: https://github.com/ogham/exa
 alias ll="ls -l"
 
 # General
