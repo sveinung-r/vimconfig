@@ -13,7 +13,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 for file in $files; do
-    if [ -f "~/$file" ]; then
+    if [ -f ~/$file ]; then
         echo "Moving existing $file -> $olddir/$file"
         mv ~/$file $oldir/
     fi
