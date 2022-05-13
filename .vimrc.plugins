@@ -1,0 +1,49 @@
+""" Personal plugins
+
+" Project tree with git integration
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'google/vim-searchindex'
+
+"" Lang specific
+" Rust syntax
+Plug 'rust-lang/rust.vim'
+
+" Typescript syntax
+Plug 'leafgarland/typescript-vim'
+
+" JSX in Typescript syntax
+Plug 'peitalin/vim-jsx-typescript'
+
+" GraphQL syntax
+Plug 'jparise/vim-graphql'
+
+" ALng server for C# (Unplug if using coc-omnisharp)
+Plug 'OmniSharp/omnisharp-vim'
+
+" Python lang server
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' } 
+
+" Language server handler
+Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
+
+" Debugger
+Plug 'puremourning/vimspector'
+
+" Always load devicons as the very last one
+" Requires : https://github.com/ryanoasis/nerd-fonts/
+Plug 'ryanoasis/vim-devicons' 
+
+" Fuzzy findera
+" requires: https://github.com/junegunn/fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" installs jedi as a submodule automatically
+if has('python') || has('python3')
+    Plug 'davidhalter/jedi-vim'
+endif
+
+" Disable default plugings from timss/vimconf
+let g:plugs_disabled = ['vim-autoclose', 'coc-jedi', 'jedi-vim']
