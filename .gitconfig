@@ -1,6 +1,5 @@
 [core]
     editor = vim
-    excludesfile = /home/tim/.gitignore_global
 [user]
     name = Erlend Hårstad
     email = erha@equinor.com
