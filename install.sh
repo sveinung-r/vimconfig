@@ -33,4 +33,4 @@ git clone https://github.com/timss/vimconf.git ~/vimconf
 echo "Creating symlink to ~/vimconf/.vimrc in home directory."
 ln -s ~/vimconf/.vimrc ~/.vimrc
 
-source .bashrc
+source $HOME/.bashrc
