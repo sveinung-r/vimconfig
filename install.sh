@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-olddir=~/dotfiles_old
+olddir=${HOME}/dotfiles_old
 
 echo -e "Creating '$olddir' for existing files\n"
 mkdir -p $olddir
@@ -13,24 +13,24 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 for file in $files; do
-    if [ -f ~/$file ]; then
+    if [ -f ${HOME}/$file ]; then
         echo "Moving existing $file -> $olddir/$file"
-        mv ~/$file $oldir/
+        mv ${HOME}/$file $oldir/
     fi
 
     echo -e "Creating symlink to $(pwd)/$file in home directory\n"
-    ln -s  $(pwd)/$file ~/$file
+    ln -s  $(pwd)/$file ${HOME}/$file
 done
 
-if [ -f ~/.vimrc ]; then
+if [ -f ${HOME}/.vimrc ]; then
     echo "Moving existing .vimrc -> $olddir/"
-    mv ~/.vimrc $oldir/
+    mv ${HOME}/.vimrc $oldir/
 fi
 
 echo "Fetching vimconfig: https://github.com/timss/vimconf.git"
 git clone https://github.com/timss/vimconf.git ~/vimconf
 
 echo "Creating symlink to ~/vimconf/.vimrc in home directory."
-ln -s ~/vimconf/.vimrc ~/.vimrc
+ln -s ${HOME}/vimconf/.vimrc ${HOME}/.vimrc
 
 source $HOME/.bashrc
