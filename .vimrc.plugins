@@ -4,6 +4,9 @@
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+" tmux <-> vim pane/splits navigation
+Plug 'christoomey/vim-tmux-navigator'
+
 Plug 'google/vim-searchindex'
 
 "" Lang specific
