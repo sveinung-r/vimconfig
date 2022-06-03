@@ -21,3 +21,8 @@ shopt -s histappend
 
 # Source additional files; alias
 if [ -f $HOME/.alias ]; then source $HOME/.alias; fi
+
+# Enable git completion on macos/bash
+if [[ "$OSTYPE" == "darwin"* && "$SHELL" == "/bin/bash" ]]; then
+    . ~/.git-completion.bash
+fi
