@@ -119,3 +119,5 @@ com! JSON %!jq .
 let &t_TI = "\<Esc>[>4;1m"
 let &t_TE = "\<Esc>[>4m"
 
+" set dir for ctags index
+set tags=tags
