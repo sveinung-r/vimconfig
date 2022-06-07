@@ -247,3 +247,6 @@ _deps
 
 ## Node
 node_modules
+
+## Ctags index
+tags
