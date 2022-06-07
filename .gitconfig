@@ -1,5 +1,6 @@
 [core]
     editor = vim
+    excludesfile = ~/.gitignore
 [user]
     name = Erlend Hårstad
     email = erha@equinor.com
