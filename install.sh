@@ -27,6 +27,8 @@ if [ -f ${HOME}/.vimrc ]; then
     mv ${HOME}/.vimrc $oldir/
 fi
 
+ln -s clangd/config.yaml ~/Library/Preferences/clangd/config.yaml
+
 echo "Fetching vimconfig: https://github.com/timss/vimconf.git"
 git clone https://github.com/timss/vimconf.git ~/vimconf
 
