@@ -31,6 +31,7 @@ ln -s clangd/config.yaml ~/Library/Preferences/clangd/config.yaml
 
 echo "Fetching vimconfig: https://github.com/timss/vimconf.git"
 git clone https://github.com/timss/vimconf.git ~/vimconf
+git checkout 23a01b3bcbfc13bfebd61f1da6b50a36b6e29e91
 
 echo "Creating symlink to ~/vimconf/.vimrc in home directory."
 ln -s ${HOME}/vimconf/.vimrc ${HOME}/.vimrc
