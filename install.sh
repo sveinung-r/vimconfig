@@ -1,16 +1,12 @@
 #!/bin/bash
 set -e
 
-olddir=${HOME}/dotfiles_old
+olddir=${HOME}/vimfiles_old
 
 echo -e "Creating '$olddir' for existing files\n"
 mkdir -p $olddir
 
-files=".bashrc .alias .vimrc.first .vimrc.last .vimrc.plugins .tmux.conf .gitconfig .gitignore"
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    files="${files} .bash_profile"
-fi
+files=".vimrc.first .vimrc.last .vimrc.plugins"
 
 for file in $files; do
     if [ -f ${HOME}/$file ]; then
@@ -26,8 +22,6 @@ if [ -f ${HOME}/.vimrc ]; then
     echo "Moving existing .vimrc -> $olddir/"
     mv ${HOME}/.vimrc $oldir/
 fi
-
-ln -s clangd/config.yaml ~/Library/Preferences/clangd/config.yaml
 
 echo "Fetching vimconfig: https://github.com/timss/vimconf.git"
 git clone https://github.com/timss/vimconf.git ~/vimconf
