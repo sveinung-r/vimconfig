@@ -1,5 +1,8 @@
 """ Personal plugins
 
+" Argwrap
+Plug 'FooSoft/vim-argwrap'
+
 " Project tree with git integration
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'

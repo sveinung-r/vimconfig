@@ -1,6 +1,11 @@
 " Make mouse aware
 set mouse=a
 
+" Argwrap
+" Precede closing brace with comma when wrapping lines
+let g:argwrap_tail_comma = 1
+nnoremap <silent> <leader>a :ArgWrap<CR>
+
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)
 

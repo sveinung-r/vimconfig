@@ -33,5 +33,3 @@ fi
 
 echo "Installing .vimrc in home directory\n"
 cp $(pwd)/vimconf/.vimrc ${HOME}/.vimrc
-
-source $HOME/.bashrc
