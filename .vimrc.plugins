@@ -28,10 +28,5 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" installs jedi as a submodule automatically
-if has('python') || has('python3')
-    Plug 'davidhalter/jedi-vim'
-endif
-
 " Disable plugings
 let g:plugs_disabled = ['vim-autoclose']
